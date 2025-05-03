@@ -1,0 +1,38 @@
+import FlexContainer from '@/components/utils/FlexContainer';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { BsFillCircleFill } from 'react-icons/bs';
+
+export default function UsersComponent() {
+  const t = useTranslations("Banner");
+  const imageFilenames = [ "avt1.png", "avt2.png", "avt3.png", "avt4.png"];
+
+  return (
+    <FlexContainer
+      dataAnimation="fade-down"
+      dataDuration="1400"
+      dataDelay="100"
+    >
+      <div className="flex -space-x-2 space-y-2">
+        {imageFilenames.map((filename, index) => (
+          <div 
+            key={index}
+            className="w-12 h-12 rounded-full"
+          >
+            <Image 
+              src={`/img/avatar/${filename}`} 
+              alt={`Imagen Avatar ${index}`} 
+              width={50} height={50}
+            />
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center space-x-2 font-secondary font-medium">
+        <BsFillCircleFill className="text-xs text-green-500 animate-pulse"/>
+
+        <p>{t("usersText")}</p>
+      </div>
+    </FlexContainer>
+  )
+}

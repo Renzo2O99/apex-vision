@@ -1,0 +1,109 @@
+{
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "localeName": {
+      "en": "English",
+      "es": "Spanish"
+    }
+  },
+  "Banner": {
+    "titlePart1": "Let's Explore",
+    "titlePart2": "Three Dimensional Visually",
+    "description": "Discover the beauty of three-dimensional space through our interactive visualization. Explore the wonders of the universe in a whole new way.",
+    "buttonText": "Get it now",
+    "linkText": "Explore Device",
+    "altImage": "Cover image",
+    "usersText": "400k people online"
+  },
+  "Navbar": {
+    "home": "Home",
+    "company": "Company",
+    "features": "Features",
+    "signUp": "Sign Up"
+  },
+  "ExperienceSection": {
+    "title": "New Experience In Playing Games",
+    "description": "Immerse yourself in a revolutionary way of playing with our state-of-the-art technology, completely transforming your traditional gaming experience",
+    "buttonText": "Get it now"
+  },
+  "VideoSection": {
+    "title": "Awesome experiences with virtual reality world"
+  },
+  "HeadsetsSection": {
+    "title": "Mixed Reality Headsets",
+    "subtitle": "Explore the metaverse with cutting-edge technology",
+    "description": "Discover the new generation of mixed reality headsets that blend the virtual and the real. Experience immersive, interactive, and amazing adventures designed to take your perception and entertainment to a whole new level.",
+    "headsetTitles": {
+      "0": "Metaverse",
+      "1": "AIoT",
+      "2": "HoloLens",
+      "3": "TPCASTT"
+    },
+    "headsetHeaders": {
+      "0": "What is the Metaverse and how can I join it?",
+      "1": "How does the integration of AI and IoT enhance gameplay?",
+      "2": "What advantages does HoloLens?",
+      "3": "Why is TPCASTT ideal for wireless experiences?"
+    },
+    "headsetDescriptions": {
+      "0": "Immerse yourself in the Metaverse and explore three-dimensional worlds where imagination knows no bounds, connecting with unique people and experiences.",
+      "1": "Experience the integration of artificial intelligence and the Internet of Things for smart and personalized gameplay at every moment.",
+      "2": "Discover the power of HoloLens, merging augmented reality with natural interaction to transform the way you learn, work, and play.",
+      "3": "With TPCASTT, enjoy a wireless mixed reality experience, with total freedom of movement and amazing visual immersion."
+    }
+  },
+  "TestimonialsSection": {
+    "title": "What our clients think",
+    "subtitle": "Our clients trust us and are satisfied with the experience.",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Elena Garcia",
+        "role": "Digital Explorer",
+        "company": "Virtual Worlds Inc.",
+        "content": "The Metaverse is incredible! The immersion is total, and I've connected with fascinating people. It's the future of entertainment and socialization.",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Javier Fernandez",
+        "role": "Professional Gamer",
+        "company": "eSports Masters",
+        "content": "The combination of AI and IoT takes gaming to another level. The response is instant, and the personalization makes every match unique. Essential!",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Sofia Martinez",
+        "role": "AR/VR Designer",
+        "company": "Creative Innovation",
+        "content": "HoloLens has revolutionized my workflow. The fusion of real and virtual allows me to design and visualize in ways that were previously impossible.",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/women/20.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Carlos Rodriguez",
+        "role": "Technology Enthusiast",
+        "company": "Freedom VR",
+        "content": "Goodbye cables! With TPCASTT, freedom of movement is total. The VR experience is much more immersive and natural. Wonderful!",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg"
+      }
+    ],
+    "trustedCompaniesTitle": "Trusted by teams from these companies and more",
+    "verifiedComment": "Verified Customer"
+  },
+  "ExploreSection": {
+    "title": "Explore the Unknown",
+    "description": "Dive into the depths of discovery and uncover hidden gems.",
+    "buttonText": "Get Started"
+  },
+  "FooterSection": {
+    "company": "Apex Vision",
+    "about": "Created by Renzo2099",
+    "copyright": "All rights reserved."
+  }
+}

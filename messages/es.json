@@ -1,0 +1,109 @@
+{
+  "LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "localeName": {
+      "en": "Inglés",
+      "es": "Español"
+    }
+  },
+  "Banner": {
+    "titlePart1": "Exploremos la",
+    "titlePart2": "Tri-Dimensionalidad Visualmente",
+    "description": "Descubre la belleza tridimensional a través de nuestra visualización interactiva. Explora los encantos del universo de una manera completamente nueva.",
+    "buttonText": "Consíguelo Ahora",
+    "linkText": "Explorar Dispositivo",
+    "altImage": "Imagen de la portada",
+    "usersText": "400 mil personas en línea"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "company": "Compañía", 
+    "features": "Características",
+    "signUp": "Registrarse"
+  },
+  "ExperienceSection": {
+    "title": "Nueva Experiencia Jugando Videojuegos",
+    "description": "Sumérgete en una revolucionaria forma de jugar con nuestra tecnología de última generación, transformando completamente tu experiencia gaming tradicional.",
+    "buttonText": "Consíguelo Ahora"
+  },
+  "VideoSection": {
+    "title": "Experiencias increíbles con el mundo de la realidad virtual"
+  },
+  "HeadsetsSection": {
+    "title": "Auriculares de Realidad Mixta",
+    "subtitle": "Explora el metaverso con tecnología de vanguardia",
+    "description": "Descubre la nueva generación de auriculares de realidad mixta que fusionan lo virtual y lo real. Vive experiencias inmersivas, interactivas y sorprendentes, diseñadas para llevar tu percepción y entretenimiento a un nivel completamente nuevo.",
+    "headsetTitles": {
+      "0": "Metaverse",
+      "1": "AIoT",
+      "2": "HoloLens",
+      "3": "TPCASTT"
+    },
+    "headsetHeaders": {
+      "0": "¿Qué es y cómo puedo ingresar al Metaverso?",
+      "1": "¿Cómo la integración de IA y IoT mejora la jugabilidad?",
+      "2": "¿Qué ventajas ofrece HoloLens?",
+      "3": "¿Por qué TPCASTT es ideal para experiencias sin cables?"
+    },
+    "headsetDescriptions": {
+      "0": "Sumérgete en el Metaverso y explora mundos tridimensionales, donde la imaginación no tiene límites, conectando con personas y experiencias únicas.",
+      "1": "Experimenta la integración de inteligencia artificial y el Internet de las cosas para una jugabilidad inteligente y personalizada en cada momento.",
+      "2": "Descubre la potencia de HoloLens, fusionando la realidad aumentada con la interacción natural para transformar tu forma de aprender, trabajar y jugar.",
+      "3": "Con TPCASTT podrás disfrutar de una experiencia de realidad mixta sin cables, con total libertad de movimiento y una inmersión visual sorprendente."
+    }
+  },
+  "TestimonialsSection": {
+    "title": "Lo que nuestros clientes opinan",
+    "subtitle": "Nuestros clientes confían en nosotros y están satisfechos con la experiencia.",
+    "trustedCompaniesTitle": "Confiado por equipos de estas empresas y más",
+    "verifiedComment": "Cliente Verificado",
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Elena García",
+        "role": "Exploradora Digital",
+        "company": "Mundos Virtuales Inc.",
+        "content": "¡El Metaverso es increíble! La inmersión es total y he conectado con gente fascinante. Es el futuro del entretenimiento y la socialización.",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/women/68.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Javier Fernández",
+        "role": "Gamer Profesional",
+        "company": "eSports Masters",
+        "content": "La combinación de IA e IoT lleva los juegos a otro nivel. La respuesta es instantánea y la personalización hace que cada partida sea única. ¡Imprescindible!",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/men/75.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Sofía Martínez",
+        "role": "Diseñadora AR/VR",
+        "company": "Innovación Creativa",
+        "content": "HoloLens ha revolucionado mi flujo de trabajo. La fusión de lo real y lo virtual me permite diseñar y visualizar de formas que antes eran imposibles.",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/women/20.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Carlos Rodríguez",
+        "role": "Entusiasta de la Tecnología",
+        "company": "Libertad VR",
+        "content": "¡Adiós cables! Con TPCASTT la libertad de movimiento es total. La experiencia VR es mucho más inmersiva y natural. ¡Una maravilla!",
+        "rating": "5",
+        "avatar": "https://randomuser.me/api/portraits/men/88.jpg"
+      }
+    ]
+  },
+  "ExploreSection": {
+    "title": "Explora lo Desconocido",
+    "description": "Sumérgete en las profundidades del descubrimiento y descubre gemas ocultas.",
+    "buttonText": "Comienzar"
+  },
+  "FooterSection": {
+    "company": "Apex Vision",
+    "about": "Construido por Renzo2099",
+    "copyright": "Todos los derechos reservados."
+  }
+}
