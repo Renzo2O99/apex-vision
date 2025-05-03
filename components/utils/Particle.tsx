@@ -9,7 +9,6 @@ import {
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import options from "@/lib/particleConfig";
-import FadeInOut from "./FadeInOut";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 export const Particle = () => {
@@ -37,13 +36,11 @@ export const Particle = () => {
 
   if (init) {
     return (
-      <FadeInOut show={show} duration={500}>
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
-      </FadeInOut>
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
     );
   }
 
