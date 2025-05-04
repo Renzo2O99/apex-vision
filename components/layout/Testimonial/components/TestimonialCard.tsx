@@ -11,7 +11,7 @@ export default function TestimonialCard({ testimonial, activeIndex, index, showV
   return (
     <Card
       key={testimonial.id}
-      className={`bg-gray-900 border-none py-2 lg:py-4 lg:px-2 text-white absolute inset-0 transition-all duration-500 ${index === activeIndex ? "opacity-100 translate-x-0 shadow-lg" : "opacity-0 translate-x-[100px] pointer-events-none"}`}
+      className={`bg-gray-900 border-none py-2 lg:py-4 lg:px-2 text-white absolute inset-0 min-h-[22rem] transition-all duration-500 ${index === activeIndex ? "opacity-100 translate-x-0 shadow-lg" : "opacity-0 translate-x-[100px] pointer-events-none"}`}
     >
       <CardContent className="p-4 md:p-8 h-full flex flex-col">
         <div className="relative flex justify-between items-start mb-4">

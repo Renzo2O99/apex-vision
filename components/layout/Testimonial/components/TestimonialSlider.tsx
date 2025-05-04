@@ -76,7 +76,7 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
         className,
       )}
     >
-      <div className="items-center px-4 md:px-6">
+      <div className="items-center md:px-6">
         <TestimonialHeader 
           title={title} 
           subtitle={subtitle} 
@@ -124,9 +124,12 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
               {trustedCompaniesTitle}
             </h3>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-              {trustedCompanies.map((company) => (
+              {trustedCompanies.map((company, index) => (
                 <div
                   key={company}
+                  data-aos="fade"
+                  data-aos-duration="1000"
+                  data-aos-delay={100 * index}
                   className="text-2xl font-semibold text-muted-foreground/50"
                 >
                   {company}

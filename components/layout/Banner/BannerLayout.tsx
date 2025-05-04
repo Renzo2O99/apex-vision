@@ -60,16 +60,14 @@ export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }:
             data-aos="fade-up"
             data-aos-duration={dataDuration}
             data-aos-delay="600"
-            className="flex justify-center items-center lg:-mt-24"
+            className="grid justify-center items-center lg:-mt-24 max-w-xs w-full mx-auto"
           >
             <Image 
-              src={img} 
-              alt={t("altImage")} 
-              priority
-              className="object-cover"
-              width={0} height={0}
-              decoding="async"
-              loading="eager"
+              src={img}
+              alt="Banner Image"
+              width={0} // Set initial width to 0 for responsive scaling
+              height={0} // Set initial height to 0 for responsive scaling
+              className="w-full h-auto object-cover"
             />
           </div>
         </div>

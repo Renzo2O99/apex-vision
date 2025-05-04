@@ -26,8 +26,12 @@
   }
 };
 
+html {
+  @apply cursor-none;
+}
+
 body {
-  @apply font-secondary bg-primary-500 text-white relative leading-relaxed font-extralight cursor-none;
+  @apply font-secondary bg-primary-500 text-white relative leading-relaxed font-extralight overflow-x-hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {

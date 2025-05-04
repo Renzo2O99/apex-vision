@@ -16,39 +16,34 @@ export default function FooterSection() {
   return (
     <footer className="text-gray-400 bg-purple-400/10">
       <div className="container px-4 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <Link 
-          href="#Home"
-          className="flex title-font font-medium items-center md:justify-start justify-center gap-2 text-white"
-        >
-          {/* <svg */}
-          <span className="ml-3">
-            {t("about")} { }
-          </span>
-        </Link>
-        <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
-          &copy; {t("company")} {currentYear} - 
-          <a
-            href="https://twitter.com/knyttneve"
-            className="text-gray-500 ml-1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {t("copyright")}
-          </a>
-        </p>
-        <span className="inline-flex gap-x-5 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="flex-1 inline-flex gap-x-5 mb-6 sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start order-1 lg:order-3 lg:mb-0 lg:justify-end">
           {socials.map((social) => (
             <Link
               key={social.id}
-              href={social.href} // Use href from object
-              target="_blank" // Open social links in new tab
-              rel="noopener noreferrer"
+              href={social.href}
+              target="_blank"
               className="text-gray-400 hover:text-orange-500 transition-all ease-in-out duration-300"
             >
               {social.icon}
             </Link>
           ))}
         </span>
+
+        <Link 
+          href="#Home"
+          className="flex title-font font-medium items-center md:justify-start justify-center gap-2 text-white cursor-none order-2"
+        >
+          <span className="ml-3">
+            {t("about")} { }
+          </span>
+        </Link>
+
+        <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4 order-3 lg:order-2">
+          &copy; {t("company")} {currentYear} - 
+          <span className="text-gray-500 ml-1">
+            {t("copyright")}
+          </span>
+        </p>
       </div>
     </footer>
   );

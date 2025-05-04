@@ -47,7 +47,7 @@ export default function LocaleSwitcher() {
             key={locale}
             disabled={locale === currentLocale}
             onSelect={() => onLocaleChange(locale)}
-            className='font-semibold text-black text-xs cursor-pointer disabled:cursor-not-allowed'
+            className='font-semibold text-black text-xs cursor-none disabled:cursor-not-allowed'
           >
             {t(`localeName.${locale}`)}
           </DropdownMenuItem>

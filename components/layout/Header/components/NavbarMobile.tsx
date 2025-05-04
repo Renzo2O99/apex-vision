@@ -15,8 +15,8 @@ export default function NavbarMobile({ navMobile, setNavMobile }: ComponentProps
   return (
     <div className={twMerge(staticContentClass, dynamicContentClass)}>
       <NavbarComponent
-        navClass="bg-section-500/50 w-full h-full lg:hidden bg-clip-padding backdrop-filter backdrop-blur-lg"
-        ulClass="flex flex-col gap-y-8 items-center justify-center h-full font-secondary"
+        navClass="bg-section-500/50 w-full h-[80%] lg:hidden bg-clip-padding backdrop-filter backdrop-blur-lg"
+        ulClass="flex flex-col gap-y-8 justify-end items-center h-[50%] font-secondary"
         icon={
           <IoClose 
             onClick={() => setNavMobile(false)}

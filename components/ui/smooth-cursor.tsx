@@ -194,6 +194,7 @@ export function SmoothCursor({
         pointerEvents: "none",
         willChange: "transform",
       }}
+      className="hidden lg:block"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{

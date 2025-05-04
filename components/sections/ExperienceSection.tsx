@@ -15,7 +15,7 @@ export default function ExperienceSection() {
   return (
     <Section>
       <Container>
-        <div className="grid min-h-[30rem] lg:grid-cols-2 lg:flex-row lg:gap-x-20">
+        <div className="grid lg:min-h-[30rem] lg:grid-cols-2 lg:flex-row lg:gap-x-20">
           <div className="flex mt-10 order-1 lg:order-0 justify-center gap-x-6 items-center lg:mt-0 lg:gap-x-12">
             <div 
               data-aos="fade-down"

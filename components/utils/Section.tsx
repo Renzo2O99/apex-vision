@@ -10,7 +10,7 @@ interface SectionPropsInterface extends AnimatedComponentPropsI {
 }
 
 export default function Section({ id, dataAnimation, dataDuration, dataOffset, dataDelay, children, bg, cursor, ref, className, ...props }: SectionPropsInterface) {
-  const staticClasses = "mb-12";
+  const staticClasses = "mb-12 overflow-hidden";
   return (
     <>
       {cursor && (
