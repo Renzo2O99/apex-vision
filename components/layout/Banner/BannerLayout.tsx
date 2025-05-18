@@ -7,7 +7,6 @@ import HoverLink from "@/components/utils/HoverLink";
 import Description from "@/components/utils/Description";
 import { AnimatedSectionPropsI } from "@/interface";
 import FlexContainer from "@/components/utils/FlexContainer";
-import Section from "@/components/utils/Section";
 import Spline from "@splinetool/react-spline";
 
 export default function BannerLayout({
@@ -20,7 +19,7 @@ export default function BannerLayout({
   const [titlePart1, titlePart2] = title.split("T");
 
   return (
-    <Section className="min-h-[38rem] pt-12 xl:pt-16 pb-12 text-center relative lg:pb-0 lg:text-center">
+    <div className="min-h-[38rem] pt-12 xl:pt-16 pb-12 text-center relative lg:pb-0 lg:text-center">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-12">
           <div className="col-span-3 grid mx-auto">
@@ -85,6 +84,6 @@ export default function BannerLayout({
           </div>
         </div>
       </Container>
-    </Section>
+    </div>
   );
 }
