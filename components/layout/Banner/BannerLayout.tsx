@@ -7,7 +7,9 @@ import HoverLink from "@/components/utils/HoverLink";
 import Description from "@/components/utils/Description";
 import { AnimatedSectionPropsI } from "@/interface";
 import FlexContainer from "@/components/utils/FlexContainer";
-import Spline from "@splinetool/react-spline";
+import Image from "next/image";
+import img from "@/public/img/layout/banner-img.svg";
+// import Spline from "@splinetool/react-spline";
 
 export default function BannerLayout({
   dataAnimation,
@@ -68,10 +70,6 @@ export default function BannerLayout({
             data-aos-delay="600"
             className="grid justify-center items-center mx-auto max-w-xs w-full col-span-2 max-h-[40rem] h-full -z-100"
           >
-            <Spline
-              scene="https://prod.spline.design/t-23dZiaN6tLH9wS/scene.splinecode"
-            />
-            {/*
             <Image 
               src={img}
               alt={t("banner_alt_image")}
@@ -80,7 +78,12 @@ export default function BannerLayout({
               height={0} // Set initial height to 0 for responsive scaling
               className="w-full h-auto object-cover"
             />
-*/}
+
+            {/*
+                        <Spline
+              scene="https://prod.spline.design/t-23dZiaN6tLH9wS/scene.splinecode"
+            />
+            */}
           </div>
         </div>
       </Container>
