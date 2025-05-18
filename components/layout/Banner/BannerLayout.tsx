@@ -66,11 +66,11 @@ export default function BannerLayout({
 
           <div
             data-aos="fade-up"
-            data-aos-duration={dataDuration}
-            data-aos-delay="600"
+            data-aos-duration="800"
+            data-aos-delay="400"
             className="grid justify-center items-center mx-auto max-w-xs w-full col-span-2 max-h-[40rem] h-full -z-100 mt-4 lg:mt-0"
-          >
-            <Image 
+            >
+            <Image
               src={img}
               alt={t("banner_alt_image")}
               priority
