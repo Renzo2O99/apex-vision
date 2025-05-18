@@ -14,9 +14,9 @@ export default function NavbarComponent({ navClass, ulClass, icon }: NavbarCompo
 
   const links: LinkInterface[] = [
     { path: "/", textKey: "home" },
-    { path: "/company", textKey: "company" },
-    { path: "/features", textKey: "features" },
-    { path: "/sign-up", textKey: "signUp" },
+    { path: "#", textKey: "company" },
+    { path: "#", textKey: "features" },
+    { path: "#", textKey: "signUp" },
   ];
 
   return (
