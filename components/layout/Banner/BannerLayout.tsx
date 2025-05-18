@@ -21,7 +21,7 @@ export default function BannerLayout({
   const [titlePart1, titlePart2] = title.split("T");
 
   return (
-    <div className="min-h-[38rem] pt-12 xl:pt-16 pb-12 text-center relative lg:pb-0 lg:text-center">
+    <div className="min-h-[38rem] pt-12 xl:pt-16 text-center relative lg:pb-0 lg:text-center">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-12">
           <div className="col-span-3 grid mx-auto">
@@ -68,7 +68,7 @@ export default function BannerLayout({
             data-aos="fade-up"
             data-aos-duration={dataDuration}
             data-aos-delay="600"
-            className="grid justify-center items-center mx-auto max-w-xs w-full col-span-2 max-h-[40rem] h-full -z-100"
+            className="grid justify-center items-center mx-auto max-w-xs w-full col-span-2 max-h-[40rem] h-full -z-100 mt-4 lg:mt-0"
           >
             <Image 
               src={img}
