@@ -1,3 +1,16 @@
+export interface RootLayoutProps {
+  children: React.ReactNode;
+  params: Promise<{locale: string}>;
+}
+
+export interface TranslationMessages {
+  metadata?: {
+    title?: string;
+    description?: string;
+  };
+  [key: string]: any;
+};
+
 export interface ComponentPropsInterface {
   children: React.ReactNode;
   className?: string;
@@ -28,10 +41,11 @@ export interface Testimonial {
   id: number;
   name: string;
   role: string;
-  company: string;
-  content: string;
   rating: number;
-  avatar: string;
+  company: string;
+  testimonial: string;
+  avatar_link: string;
+  verified_comment: string;
 }
 
 export interface TestimonialSliderProps {

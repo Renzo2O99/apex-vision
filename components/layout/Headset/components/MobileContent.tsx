@@ -2,7 +2,10 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { useTranslations } from "next-intl";
 
 export default function MobileContent({ index }: { index: number }) {
-  const t = useTranslations("HeadsetsSection");
+  const t = useTranslations("headset_section");
+
+  const names = t("headset_items.names").split(",");
+  const descriptions = t("headset_items.descriptions").split(".,");
 
   return (
     <>
@@ -13,11 +16,11 @@ export default function MobileContent({ index }: { index: number }) {
             className="bg-section-500 first:rounded-t-md last:rounded-b-md px-4 rounded-sm bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20"
           >
             <AccordionTrigger className="text-sm p-2 text-center">
-              {t(`headsetHeaders.${index}`)}
+              {names[index]}
             </AccordionTrigger>
 
             <AccordionContent className="text-center">
-              {t(`headsetDescriptions.${index}`)}
+              {descriptions[index]}
             </AccordionContent>
           </AccordionItem>
       </Accordion>

@@ -2,9 +2,7 @@ import { AnimatedComponentPropsI } from '@/interface';
 import { twMerge } from 'tailwind-merge';
 
 export default function Title({ dataAnimation, dataDelay, dataOffset, dataDuration, children, className }: AnimatedComponentPropsI) {
-  const staticClasses = "text-3xl text-center leading-tight font-bold mb-8 md:text-4xl lg:text-5xl lg:text-left lg:leading-snug";
-
-
+  const staticClasses = "text-[clamp(1.5rem,2.5vw,2.25rem)] new-title text-center leading-tight font-bold mb-8 md:text-[clamp(1.75rem,3.5vw,3rem)] lg:text-left lg:leading-snug";
 
   return (
     <h2 

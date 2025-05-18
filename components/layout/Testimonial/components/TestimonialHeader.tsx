@@ -7,7 +7,8 @@ export default function TestimonialHeader({ title, subtitle, controls, container
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="text-center mb-12 space-y-4"
+      className="text-center mb-12 space-y-4 lg:min-w-[50rem]"
+      //? Tamaño de la sección y card para cada testimonio
     >
       <motion.h2
         variants={itemVariants}

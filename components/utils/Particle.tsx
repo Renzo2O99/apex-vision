@@ -40,6 +40,7 @@ export const Particle = () => {
       <FadeInOut show={show} duration={500}>
         <Particles
           id="tsparticles"
+          className="-z-10"
           particlesLoaded={particlesLoaded}
           options={options}
         />

@@ -10,7 +10,7 @@ interface NavbarComponentProps {
 }
 
 export default function NavbarComponent({ navClass, ulClass, icon }: NavbarComponentProps) {
-  const t = useTranslations("Navbar");
+  const t = useTranslations("navbar");
 
   const links: LinkInterface[] = [
     { path: "/", textKey: "home" },

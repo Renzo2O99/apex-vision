@@ -5,7 +5,7 @@ import { HeroVideo } from "../layout/HeroVideo/HeroVideo";
 import Title from "../utils/Title";
 
 export default function VideoSection() {
-  const t = useTranslations("VideoSection");
+  const t = useTranslations("video_section");
   
   return (
     <Section>
@@ -15,7 +15,7 @@ export default function VideoSection() {
             dataAnimation="fade"
             dataOffset="400"
             className="mx-auto max-w-11/12 text-2xl md:text-3xl lg:text-4xl lg:text-center lg:max-w-4/5">
-            {t("title")}
+            {t("video_title")}
           </Title>
 
           <HeroVideo />

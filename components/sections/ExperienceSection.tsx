@@ -10,7 +10,7 @@ import Description from "../utils/Description";
 import Section from "../utils/Section";
 
 export default function ExperienceSection() {
-  const t = useTranslations("ExperienceSection");
+  const t = useTranslations("experience_section");
 
   return (
     <Section>
@@ -52,15 +52,15 @@ export default function ExperienceSection() {
             className="flex flex-col justify-center items-start mt-6 mb-10 lg:my-0"
           >
             <Title className="lg:text-4xl">
-              {t("title")}
+              {t("experience_title")}
             </Title>
 
             <Description className="mb-6">
-              {t("description")}
+              {t("experience_description")}
             </Description>
 
             <Button className="lg:max-w-52 mx-auto lg:mx-0">
-              {t("buttonText")}
+              {t("experience_button_text")}
             </Button>
           </div>
         </div>

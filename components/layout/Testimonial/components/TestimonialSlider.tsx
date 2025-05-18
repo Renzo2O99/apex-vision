@@ -9,6 +9,7 @@ import { useEffect, useRef, useState } from "react";
 import TestimonialHeader from "./TestimonialHeader";
 import TestimonialCard from "./TestimonialCard";
 import NavigationButtons from "./NavigationButtons";
+import Subtitle from "@/components/utils/Subtitle";
 
 export default function TestimonialSlider({ testimonialsConfig, className }: TestimonialSliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -97,7 +98,8 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
             </div>
 
             <div className="relative h-[22rem] md:h-[18rem] xl:h-[20rem]">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => { 
+              return (
                 <TestimonialCard
                   key={testimonial.id}
                   testimonial={testimonial}
@@ -105,7 +107,7 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
                   index={index}
                   showVerifiedBadge={showVerifiedBadge}
                 />
-              ))}
+              )})}
             </div>
           </motion.div>
 
@@ -120,9 +122,9 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
 
         {trustedCompanies.length > 0 && (
           <motion.div variants={itemVariants} className="mt-20 pt-10 border-t">
-            <h3 className="text-sm font-medium text-muted-foreground text-center mb-8">
+            <Subtitle className="text-sm font-medium text-muted-foreground text-center mb-8 md:text-base lg:text-lg">
               {trustedCompaniesTitle}
-            </h3>
+            </Subtitle>
             <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
               {trustedCompanies.map((company, index) => (
                 <div

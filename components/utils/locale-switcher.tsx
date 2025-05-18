@@ -10,7 +10,7 @@ import { routing } from '@/i18n/routing';
 
 export default function LocaleSwitcher() {
   const currentLocale = useLocale();
-  const t = useTranslations('LocaleSwitcher');
+  const t = useTranslations('locale_switcher');
   const router = useRouter();
   const currentPathname = usePathname();
 
@@ -24,8 +24,8 @@ export default function LocaleSwitcher() {
     router.replace(currentPathname, { locale: newLocale });
   };
 
-  // Usamos t(`localeName.${currentLocale}`) para obtener el nombre traducido del idioma actual
-  const currentLocaleName = t(`localeName.${currentLocale}`);
+  // Usamos "currentLocale" para obtener el nombre traducido del idioma actual
+  const currentLocaleName = t(`${currentLocale}`);
 
   return (
     <DropdownMenu>
@@ -49,7 +49,7 @@ export default function LocaleSwitcher() {
             onSelect={() => onLocaleChange(locale)}
             className='font-semibold text-black text-xs cursor-none disabled:cursor-not-allowed'
           >
-            {t(`localeName.${locale}`)}
+            {t(`${locale}`)}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

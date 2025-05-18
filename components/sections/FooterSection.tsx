@@ -3,7 +3,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function FooterSection() {
-  const t = useTranslations("FooterSection");
+  const t = useTranslations("footer_section");
   const currentYear = new Date().getFullYear();
 
   const socials = [
@@ -39,7 +39,7 @@ export default function FooterSection() {
         </Link>
 
         <p className="text-sm text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4 order-3 lg:order-2">
-          &copy; {t("company")} {currentYear} - 
+          &copy; Apex Vision {currentYear} - 
           <span className="text-gray-500 ml-1">
             {t("copyright")}
           </span>

@@ -1,77 +1,90 @@
 import Button from "@/components/utils/Button";
 import Container from "@/components/utils/Container";
 import Title from "@/components/utils/Title";
-import img from "@/public/img/layout/banner-img.svg";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import UsersComponent from "./components/UsersComponent";
 import HoverLink from "@/components/utils/HoverLink";
 import Description from "@/components/utils/Description";
 import { AnimatedSectionPropsI } from "@/interface";
 import FlexContainer from "@/components/utils/FlexContainer";
+import Section from "@/components/utils/Section";
+import Spline from "@splinetool/react-spline";
 
-export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }: AnimatedSectionPropsI) {
-  const t = useTranslations("Banner");
+export default function BannerLayout({
+  dataAnimation,
+  dataDuration,
+  dataDelay,
+}: AnimatedSectionPropsI) {
+  const t = useTranslations("banner_section");
+  const title = t("banner_title");
+  const [titlePart1, titlePart2] = title.split("T");
 
   return (
-    <section className="min-h-[38rem] pt-16 pb-12 text-center relative lg:pb-0 lg:text-left">
+    <Section className="min-h-[38rem] pt-12 xl:pt-16 pb-12 text-center relative lg:pb-0 lg:text-center">
       <Container>
-        <div className="flex flex-col lg:flex-row">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-12">
+          <div className="col-span-3 grid mx-auto">
             <Title
               dataAnimation={dataAnimation}
               dataDuration={dataDuration}
               dataDelay={dataDelay}
+              className="grid grid-rows-2 mx-auto"
             >
-              {t("titlePart1")} <br />
-              {t("titlePart2")}
+              <span className="row-span-1 flex items-end mx-auto">
+                {titlePart1}
+              </span>
+              <span className="row-span-1 text-center">T{titlePart2}</span>
             </Title>
 
             <Description
               dataAnimation={dataAnimation}
               dataDuration={dataDuration}
               dataDelay="400"
+              className="lg:text-center"
             >
-              {t("description")}
+              {t("banner_description")}
             </Description>
 
-            <FlexContainer 
+            <FlexContainer
               dataAnimation={dataAnimation}
               dataDuration={dataDuration}
               dataDelay="200"
               className="max-w-80 gap-x-8 mx-auto mb-12 space-y-8 lg:space-x-8 lg:max-w-none"
             >
               <Button className="mx-auto lg:mx-0 lg:my-auto">
-                {t("buttonText")}
+                {t("banner_button_text")}
               </Button>
 
-              <HoverLink
-                href="/"
-                className="cursor-none"
-              >
-                {t("linkText")}
+              <HoverLink href="/" className="cursor-none">
+                {t("banner_link_text")}
               </HoverLink>
             </FlexContainer>
 
             <UsersComponent />
           </div>
 
-          <div 
+          <div
             data-aos="fade-up"
             data-aos-duration={dataDuration}
             data-aos-delay="600"
-            className="grid justify-center items-center lg:-mt-24 max-w-xs w-full mx-auto"
+            className="grid justify-center items-center mx-auto max-w-xs w-full col-span-2 max-h-[40rem] h-full -z-100"
           >
+            <Spline
+              scene="https://prod.spline.design/t-23dZiaN6tLH9wS/scene.splinecode"
+            />
+            {/*
             <Image 
               src={img}
-              alt="Banner Image"
+              alt={t("banner_alt_image")}
+              priority
               width={0} // Set initial width to 0 for responsive scaling
               height={0} // Set initial height to 0 for responsive scaling
               className="w-full h-auto object-cover"
             />
+*/}
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 }

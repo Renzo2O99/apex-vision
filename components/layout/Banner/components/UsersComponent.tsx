@@ -4,11 +4,12 @@ import Image from 'next/image';
 import { BsFillCircleFill } from 'react-icons/bs';
 
 export default function UsersComponent() {
-  const t = useTranslations("Banner");
+  const t = useTranslations("banner_section");
   const imageFilenames = [ "avt1.png", "avt2.png", "avt3.png", "avt4.png"];
 
   return (
     <FlexContainer
+      className="mx-auto"
       dataAnimation="fade-down"
       dataDuration="1400"
       dataDelay="100"
@@ -31,7 +32,7 @@ export default function UsersComponent() {
       <div className="flex items-center space-x-2 font-secondary font-medium">
         <BsFillCircleFill className="text-xs text-green-500 animate-pulse"/>
 
-        <p>{t("usersText")}</p>
+        <p>{t("banner_users_text")}</p>
       </div>
     </FlexContainer>
   )
