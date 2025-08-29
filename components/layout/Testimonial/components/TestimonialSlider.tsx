@@ -57,14 +57,10 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
       opacity: 1, y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
-
-  if (testimonials.length === 0) {
-    return null;
-  }
 
   return (
     <Section

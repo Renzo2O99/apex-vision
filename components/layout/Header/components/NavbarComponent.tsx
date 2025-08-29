@@ -1,5 +1,5 @@
-import HoverLink from "@/components/utils/HoverLink";
-import LocaleSwitcher from "@/components/utils/locale-switcher";
+import LocaleSwitcher from "@/components/utils/LocaleSwitcher";
+import NavLink from "@/components/utils/NavLink";
 import { LinkInterface } from "@/interface";
 import { useTranslations } from "next-intl";
 
@@ -30,14 +30,9 @@ export default function NavbarComponent({ navClass, ulClass, icon }: NavbarCompo
           return isLast ? (
             <li key={index}><LocaleSwitcher /></li>
           ) : (
-            <li key={index}>
-              <HoverLink 
-                href={link.path}
-                className="cursor-none"
-              >
-                {t(link.textKey)}
-              </HoverLink>
-            </li>
+            <NavLink key={index} href={link.path}>
+              {t(link.textKey)}
+            </NavLink>
           );
         })}
       </ul>

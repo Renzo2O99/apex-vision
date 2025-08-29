@@ -30,8 +30,14 @@ html {
   @apply cursor-none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   @apply font-secondary bg-primary-500 text-white relative leading-relaxed font-extralight overflow-x-hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -5,7 +5,7 @@ const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL;
 const DIRECTUS_TOKEN = process.env.DIRECTUS_STATIC_TOKEN;
 
 if (!DIRECTUS_URL) {
-  throw new Error('NEXT_PUBLIC_DIRECTUS_URL no está configurado en las variables de entorno.');
+  throw new Error('DIRECTUS_URL no está configurado en las variables de entorno.');
 }
 
 // Configuración básica del cliente

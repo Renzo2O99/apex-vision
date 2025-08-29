@@ -9,13 +9,9 @@ import { AnimatedSectionPropsI } from "@/interface";
 import FlexContainer from "@/components/utils/FlexContainer";
 import Image from "next/image";
 import img from "@/public/img/layout/banner-img.svg";
-// import Spline from "@splinetool/react-spline";
 
-export default function BannerLayout({
-  dataAnimation,
-  dataDuration,
-  dataDelay,
-}: AnimatedSectionPropsI) {
+
+export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }: AnimatedSectionPropsI) {
   const t = useTranslations("banner_section");
   const title = t("banner_title");
   const [titlePart1, titlePart2] = title.split("T");

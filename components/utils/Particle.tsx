@@ -32,7 +32,7 @@ export const Particle = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
+    await console.log(container);
   };
 
   if (init) {

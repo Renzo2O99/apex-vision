@@ -1,8 +1,8 @@
 import { ComponentPropsInterface } from '@/interface'
-import { twMerge } from 'tailwind-merge'
+import { cn } from '@/lib/utils'
 
 export default function Container({ children, className }: ComponentPropsInterface) {
   return (
-    <div className={twMerge("container mx-auto p-6 lg:p-8", className)}>{children}</div>
+    <div className={cn("container mx-auto p-6 lg:p-8", className)}>{children}</div>
   )
 }

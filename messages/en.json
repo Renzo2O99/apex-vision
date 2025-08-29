@@ -1,10 +1,8 @@
 {
-  "LocaleSwitcher": {
+  "locale_switcher": {
     "label": "Change language",
-    "localeName": {
-      "en": "English",
-      "es": "Spanish"
-    }
+    "en": "English",
+    "es": "Spanish"
   },
   "Banner": {
     "titlePart1": "Let's Explore",

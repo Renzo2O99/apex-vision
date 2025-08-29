@@ -5,10 +5,9 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Providers } from "@/providers/Providers";
-import { getMessages } from "next-intl/server";
 import 'aos/dist/aos.css';
-import { fetchTranslations } from "@/i18n/request";
 import { RootLayoutProps } from "@/interface";
+import { fetchTranslations } from "@/i18n/request";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,7 +33,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-// Remueve la anotación de tipo explícita aquí
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
 
@@ -42,7 +40,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     notFound();
   }
 
-  const messages = await getMessages();
+  const messages = await fetchTranslations(locale);
 
   return (
     <html 

@@ -13,11 +13,12 @@ export default function UsersComponent() {
       dataAnimation="fade-down"
       dataDuration="1400"
       dataDelay="100"
+      dataOnce={true}
     >
       <div className="flex -space-x-2 space-y-2">
         {imageFilenames.map((filename, index) => (
           <div 
-            key={index}
+            key={filename}
             className="w-12 h-12 rounded-full"
           >
             <Image 
