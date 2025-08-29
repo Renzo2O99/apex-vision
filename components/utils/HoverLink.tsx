@@ -1,6 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { ComponentPropsInterface } from "@/interface";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 interface HoverLinkProps extends ComponentPropsInterface {
   href: string;
@@ -12,7 +12,7 @@ export default function HoverLink({ children, className, href }: HoverLinkProps)
   return (
     <Link 
       href={href}
-      className={twMerge(staticClass, className)}
+      className={cn(staticClass, className)}
     >
       <p>{children}</p>
     </Link>

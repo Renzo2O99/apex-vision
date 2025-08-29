@@ -21,6 +21,7 @@ export interface AnimatedSectionPropsI {
   dataDuration?: string;
   dataOffset?: string;
   dataDelay?: string;
+  dataOnce?: boolean;
 }
 
 export interface AnimatedComponentPropsI extends AnimatedSectionPropsI {

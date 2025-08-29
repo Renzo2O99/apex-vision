@@ -1,10 +1,8 @@
 {
-  "LocaleSwitcher": {
+  "locale_switcher": {
     "label": "Cambiar idioma",
-    "localeName": {
-      "en": "Inglés",
-      "es": "Español"
-    }
+    "en": "Inglés",
+    "es": "Español"
   },
   "Banner": {
     "titlePart1": "Exploremos la",
@@ -17,7 +15,7 @@
   },
   "Navbar": {
     "home": "Inicio",
-    "company": "Compañía", 
+    "company": "Compañía",
     "features": "Características",
     "signUp": "Registrarse"
   },

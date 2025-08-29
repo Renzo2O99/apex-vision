@@ -1,5 +1,5 @@
 import { AnimatedComponentPropsI } from "@/interface";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 export default function Description({ dataAnimation, dataDuration, dataDelay, children, className}: AnimatedComponentPropsI) {
   const staticClasses = "font-secondary text-lg text-center mb-12 max-w-[32rem] mx-auto md:text-xl lg:text-left";
@@ -9,7 +9,7 @@ export default function Description({ dataAnimation, dataDuration, dataDelay, ch
       data-aos={dataAnimation}
       data-aos-duration={dataDuration}
       data-aos-delay={dataDelay}
-      className={twMerge(staticClasses, className)}
+      className={cn(staticClasses, className)}
     >
       {children}
     </p>

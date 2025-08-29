@@ -29,7 +29,7 @@ export default function HeroSection() {
 
       <NavbarMobile 
         navMobile={navMobile} 
-        setNavMobile={setNavMobile} 
+        setNavMobileAction={setNavMobile} 
       />
     </Section>
   );

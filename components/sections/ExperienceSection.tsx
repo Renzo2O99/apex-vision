@@ -55,7 +55,7 @@ export default function ExperienceSection() {
               {t("experience_title")}
             </Title>
 
-            <Description className="mb-6">
+            <Description className="mb-6 lg:mx-0">
               {t("experience_description")}
             </Description>
 

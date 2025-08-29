@@ -1,5 +1,5 @@
 import { AnimatedComponentPropsI } from "@/interface";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 import { SmoothCursor } from "../ui/smooth-cursor";
 
 interface SectionPropsInterface extends AnimatedComponentPropsI {
@@ -24,7 +24,7 @@ export default function Section({ id, dataAnimation, dataDuration, dataOffset, d
         data-aos-duration={dataDuration}
         data-aos-offset={dataOffset}
         data-aos-delay={dataDelay}
-        className={twMerge(staticClasses, bg, className)}
+        className={cn(staticClasses, bg, className)}
         {...props}
       >
         {children}

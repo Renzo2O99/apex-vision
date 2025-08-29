@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 // URL de la API de Directus
-const DIRECTUS_API_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL;
+const DIRECTUS_API_URL = process.env.DIRECTUS_URL;
 
 // Mapeo de locales de URL a códigos de idioma de Directus
 export const localeToDirectusCodeMap: { [key: string]: string } = {

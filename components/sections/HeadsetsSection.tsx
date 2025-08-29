@@ -31,7 +31,7 @@ export default function HeadsetsSection() {
           dataDuration="800"
           dataOffset="300"
           dataDelay="100"
-          className="text-center text-pretty mx-auto px-4 mb-8 text-gray-600 md:px-0 lg:max-w-1/2 lg:pb-8">
+          className="text-center text-pretty font-semibold mx-auto px-4 mb-8 text-gray-700 md:px-0 lg:max-w-1/2 lg:pb-8">
           {t("headset_description")}
         </Subtitle>
 

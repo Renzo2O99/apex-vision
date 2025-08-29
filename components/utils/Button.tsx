@@ -1,7 +1,7 @@
 "use client";
 
 import { ComponentPropsInterface } from "@/interface";
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 import { useRef, useState } from "react";
 
 export default function Button({ children, className }: ComponentPropsInterface) {
@@ -33,7 +33,7 @@ export default function Button({ children, className }: ComponentPropsInterface)
   
   return (
     <button 
-      className={twMerge(staticClass, animationClass, className)}
+      className={cn(staticClass, animationClass, className)}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
