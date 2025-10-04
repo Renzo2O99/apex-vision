@@ -35,10 +35,9 @@ html {
 }
 
 body {
-  @apply font-secondary bg-primary-500 relative text-white leading-relaxed font-extralight overflow-x-hidden;
+  @apply font-secondary bg-primary-500 text-white relative leading-relaxed font-extralight overflow-x-hidden;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
