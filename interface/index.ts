@@ -25,7 +25,7 @@ export interface AnimatedSectionPropsI {
 }
 
 export interface AnimatedComponentPropsI extends AnimatedSectionPropsI {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
 }
 
@@ -56,8 +56,6 @@ export interface TestimonialSliderProps {
     testimonials: Testimonial[];
     autoRotateInterval: number;
     showVerifiedBadge: boolean;
-    trustedCompanies: string[];
-    trustedCompaniesTitle: string;
   };
   className?: string;
 }

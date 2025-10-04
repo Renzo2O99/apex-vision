@@ -40,7 +40,7 @@ export default function HeadsetsSection() {
             <HeadsetLayout
               key={index}
               dataAnimation="zoom-in"
-              dataOffset="300"
+              dataOffset="100"
               dataDuration="800"
               dataDelay="200"
               image={image}

@@ -9,11 +9,10 @@ import { useEffect, useRef, useState } from "react";
 import TestimonialHeader from "./TestimonialHeader";
 import TestimonialCard from "./TestimonialCard";
 import NavigationButtons from "./NavigationButtons";
-import Subtitle from "@/components/utils/Subtitle";
 
 export default function TestimonialSlider({ testimonialsConfig, className }: TestimonialSliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const { title, subtitle, testimonials, autoRotateInterval, showVerifiedBadge, trustedCompanies, trustedCompaniesTitle } = testimonialsConfig;
+  const { title, subtitle, testimonials, autoRotateInterval, showVerifiedBadge } = testimonialsConfig;
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
   const controls = useAnimation();
@@ -115,27 +114,6 @@ export default function TestimonialSlider({ testimonialsConfig, className }: Tes
             setActiveIndex={setActiveIndex}
           />
         </motion.div>
-
-        {trustedCompanies.length > 0 && (
-          <motion.div variants={itemVariants} className="mt-20 pt-10 border-t">
-            <Subtitle className="text-sm font-medium text-muted-foreground text-center mb-8 md:text-base lg:text-lg">
-              {trustedCompaniesTitle}
-            </Subtitle>
-            <div className="flex flex-wrap justify-center gap-x-12 gap-y-8">
-              {trustedCompanies.map((company, index) => (
-                <div
-                  key={company}
-                  data-aos="fade"
-                  data-aos-duration="1000"
-                  data-aos-delay={100 * index}
-                  className="text-2xl font-semibold text-muted-foreground/50"
-                >
-                  {company}
-                </div>
-              ))}
-            </div>
-          </motion.div>
-        )}
       </div>
     </Section>
   );

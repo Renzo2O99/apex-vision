@@ -1,22 +1,17 @@
+"use client";
+
 import Container from "@/components/utils/Container";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { HiMenu } from "react-icons/hi";
 import NavbarComponent from "./components/NavbarComponent";
-import LocaleSwitcherMobile from "@/components/utils/LocaleSwitcherMobile";
 import Logo from "@/public/img/layout/logo.svg";
 import { AnimatedSectionPropsI } from "@/interface";
 
-interface HeaderLayoutProps extends AnimatedSectionPropsI {
-  setNavMobile: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
 export default function HeaderLayout({
-  setNavMobile,
   dataAnimation,
   dataDuration,
   dataDelay,
-}: HeaderLayoutProps) {
+}: AnimatedSectionPropsI) {
   return (
     <header
       data-aos={dataAnimation}
@@ -25,7 +20,7 @@ export default function HeaderLayout({
     >
       <Container>
         <div className="flex items-center justify-between">
-          <Link href={"/"}>
+          <Link className="hidden md:block" href={"/"}>
             <Image
               src={Logo}
               alt={String(Logo)}
@@ -39,14 +34,6 @@ export default function HeaderLayout({
             navClass="hidden lg:flex"
             ulClass="flex items-center space-x-12 font-secondary"
           />
-
-          <div className="flex items-center gap-3 lg:hidden">
-            <LocaleSwitcherMobile />
-            <HiMenu
-              onClick={() => setNavMobile(true)}
-              className="text-3xl text-white cursor-pointer"
-            />
-          </div>
         </div>
       </Container>
     </header>

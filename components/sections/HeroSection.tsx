@@ -1,35 +1,34 @@
 "use client";
 
-import { useState } from "react";
-import BannerLayout from "../layout/Banner/BannerLayout";
+import dynamic from "next/dynamic";
 import HeaderLayout from "../layout/Header/HeaderLayout";
-import NavbarMobile from "../layout/Header/components/NavbarMobile";
 import Section from "../utils/Section";
+import Loader from "@/app/loader";
+
+const DynamicBannerLayout = dynamic(
+  () => import("../layout/Banner/BannerLayout"),
+  {
+    ssr: false,
+    loading: () => <Loader />,
+  }
+);
 
 export default function HeroSection() {
-  const [navMobile, setNavMobile] = useState(false);
-
   return (
-    <Section 
+    <Section
       dataAnimation="fade-down"
-      className="relative overflow-hidden before:w-[38rem] before:h-68 before:bg-[url('/img/layout/circle.png')] before:bg-no-repeat before:absolute before:-top-16 before:left-[36rem] before:hidden lg:before:flex"
+      className="overflow-hidden relative before:w-[38rem] before:h-68 before:bg-[url('/img/layout/circle.png')] before:bg-no-repeat before:absolute before:-top-16 before:left-[36rem] before:hidden lg:before:flex"
     >
-      <HeaderLayout 
-        setNavMobile={setNavMobile} 
+      <HeaderLayout
         dataAnimation="fade-down"
         dataDuration="1400"
         dataDelay="800"
       />
 
-      <BannerLayout
+      <DynamicBannerLayout
         dataAnimation="fade-down"
         dataDuration="1400"
         dataDelay="600"
-      />
-
-      <NavbarMobile 
-        navMobile={navMobile} 
-        setNavMobileAction={setNavMobile} 
       />
     </Section>
   );

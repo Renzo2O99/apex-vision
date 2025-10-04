@@ -9,7 +9,7 @@ export default function UsersComponent() {
 
   return (
     <FlexContainer
-      className="mx-auto"
+      className="mx-auto z-10"
       dataAnimation="fade-down"
       dataDuration="1400"
       dataDelay="100"

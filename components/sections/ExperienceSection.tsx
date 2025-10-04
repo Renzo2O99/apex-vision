@@ -4,10 +4,10 @@ import expImage1 from "@/public/img/sections/experience/exp-img-1.png";
 import expImage2 from "@/public/img/sections/experience/exp-img-2.png";
 import { useTranslations } from "next-intl";
 import { replaceHyphensWithSpaces } from "@/lib/utils";
-import Button from "../utils/Button";
 import Title from "../utils/Title";
 import Description from "../utils/Description";
 import Section from "../utils/Section";
+import { MagicButton } from "../utils/MagicButton";
 
 export default function ExperienceSection() {
   const t = useTranslations("experience_section");
@@ -19,7 +19,7 @@ export default function ExperienceSection() {
           <div className="flex mt-10 order-1 lg:order-0 justify-center gap-x-6 items-center lg:mt-0 lg:gap-x-12">
             <div 
               data-aos="fade-down"
-              data-aos-offset="400"
+              data-aos-offset="100"
               data-aos-delay="400"
               data-aos-duration="1000"
               className="self-start"
@@ -49,7 +49,7 @@ export default function ExperienceSection() {
             data-aos-offset="400"
             data-aos-delay="0"
             data-aos-duration="1000"
-            className="flex flex-col justify-center items-start mt-6 mb-10 lg:my-0"
+            className="flex flex-col justify-center items-center lg:items-start mt-6 mb-10 lg:my-0"
           >
             <Title className="lg:text-4xl">
               {t("experience_title")}
@@ -59,9 +59,9 @@ export default function ExperienceSection() {
               {t("experience_description")}
             </Description>
 
-            <Button className="lg:max-w-52 mx-auto lg:mx-0">
+            <MagicButton className="lg:max-w-60">
               {t("experience_button_text")}
-            </Button>
+            </MagicButton>
           </div>
         </div>
       </Container>

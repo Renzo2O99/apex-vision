@@ -1,4 +1,3 @@
-import Button from "@/components/utils/Button";
 import Container from "@/components/utils/Container";
 import Title from "@/components/utils/Title";
 import { useTranslations } from "next-intl";
@@ -9,6 +8,7 @@ import { AnimatedSectionPropsI } from "@/interface";
 import FlexContainer from "@/components/utils/FlexContainer";
 import Image from "next/image";
 import img from "@/public/img/layout/banner-img.svg";
+import { MagicButton } from "@/components/utils/MagicButton";
 
 
 export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }: AnimatedSectionPropsI) {
@@ -48,9 +48,9 @@ export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }:
               dataDelay="200"
               className="max-w-80 gap-x-8 mx-auto mb-12 space-y-8 lg:space-x-8 lg:max-w-none"
             >
-              <Button className="mx-auto lg:mx-0 lg:my-auto">
+              <MagicButton className="mx-auto lg:mx-0 lg:my-auto">
                 {t("banner_button_text")}
-              </Button>
+              </MagicButton>
 
               <HoverLink href="/" className="cursor-none">
                 {t("banner_link_text")}
@@ -70,9 +70,9 @@ export default function BannerLayout({ dataAnimation, dataDuration, dataDelay }:
               src={img}
               alt={t("banner_alt_image")}
               priority
-              width={0} // Set initial width to 0 for responsive scaling
-              height={0} // Set initial height to 0 for responsive scaling
-              className="w-full h-auto object-cover"
+              width={0} 
+              height={0}
+              className="w-full h-auto object-cover hidden md:block"
             />
 
             {/*

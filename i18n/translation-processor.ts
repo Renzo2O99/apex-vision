@@ -114,10 +114,11 @@ export function formatTranslationData(localeTranslationData: any) {
       title: principalData.title,
       description: principalData.description,
     },
-    navbar: {
+    navbar_section: {
       home: principalData.home,
       company: principalData.company,
       features: principalData.features,
+      contact: principalData.contact,
       signUp: principalData.sign_up,
     },
     banner_section: {

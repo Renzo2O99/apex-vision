@@ -39,6 +39,7 @@ export interface PrincipalData {
   home: string;
   company: string;
   features: string;
+  contact: string;
   sign_up: string;
   banner_title: string;
   banner_alt_image: string;

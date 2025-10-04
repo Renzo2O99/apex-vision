@@ -1,0 +1,123 @@
+/* styles/Loader.module.css */
+
+/* --- Contenedor para centrar el loader --- */
+.loaderWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999; /* Ensure it's on top of everything */
+}
+
+/* --- Estilos del Núcleo --- */
+.loader {
+  --float: 5%;
+  --radius: 2rem;
+  
+  position: relative;
+  height: var(--radius);
+  width: var(--radius);
+  border-radius: var(--radius);
+  background-color: #f33; /* bg-red-500 */
+  
+  /* ✨ La animación se aplica directamente aquí */
+  animation: floatAtom 2s linear infinite;
+}
+
+/* Iluminación del núcleo */
+.loader::after {
+  --light-x: 30%;
+  --light-y: 25%;
+  --light-radius: 3%;
+  
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 1), transparent calc(1 * var(--light-radius))),
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.8), transparent calc(2 * var(--light-radius))),
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.6), transparent calc(3 * var(--light-radius))),
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.4), transparent calc(4 * var(--light-radius))),
+    radial-gradient(circle at var(--light-x) var(--light-y), rgba(255, 255, 255, 0.2), transparent calc(5 * var(--light-radius)));
+}
+
+/* --- Estilos de las Órbitas y Electrones --- */
+.loaderOrbits {
+  --color-line: #fff;
+  --color-glow: #0ff;
+  --electron-nb: 3;
+  --radius: 500%;
+  
+  position: absolute;
+  height: var(--radius);
+  width: var(--radius);
+  border-radius: var(--radius);
+  left: calc(50% - var(--radius) / 2);
+  top: calc(50% - var(--radius) / 2);
+  filter: drop-shadow(0 0 0.3rem var(--color-glow));
+}
+
+.electron {
+  --clip-radius: 20%;
+  --radius: 100%;
+  --ratio: 4;
+  
+  position: absolute;
+  z-index: 50;
+  border-radius: var(--radius);
+  height: calc(var(--radius) / var(--ratio));
+  width: var(--radius);
+  left: calc(50% - var(--radius) / 2);
+  top: calc(50% - var(--radius) / (var(--ratio) * 2));
+  transform: rotateZ(calc(var(--index) * 180deg / var(--electron-nb)));
+  
+  /* ✨ La animación se aplica directamente aquí */
+  animation: orbitElectron 0.5s linear infinite;
+  animation-delay: calc((var(--index) + 1) * 0.5s / var(--electron-nb));
+}
+
+/* Luz de los electrones */
+.electron::before,
+.electron::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  box-shadow: inset 0 var(--offset-direction) 0 0.02rem var(--color-line);
+}
+
+.electron::before {
+  --offset-direction: 0.1rem;
+}
+.electron::after {
+  --offset-direction: -0.1rem;
+}
+
+
+/* --- Definiciones de @keyframes --- */
+/* ✨ Los keyframes ahora viven en el mismo archivo CSS */
+
+@keyframes floatAtom {
+  0%, 50%, 100% { transform: translateY(calc(-1 * var(--float))); }
+  25% { transform: translateY(calc(-2 * var(--float))); }
+  75% { transform: translateY(0); }
+}
+
+@keyframes orbitElectron {
+  0%, 100% { clip-path: ellipse(calc(2 * var(--clip-radius)) var(--clip-radius) at 50% 0); }
+  25% { clip-path: ellipse(calc(2 * var(--clip-radius)) var(--clip-radius) at 0 50%); }
+  50% { clip-path: ellipse(calc(2 * var(--clip-radius)) var(--clip-radius) at 50% 100%); }
+  75% { clip-path: ellipse(calc(2 * var(--clip-radius)) var(--clip-radius) at 100% 50%); }
+}

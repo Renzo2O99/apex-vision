@@ -103,5 +103,10 @@
     "company": "Apex Vision",
     "about": "Construido por Renzo2099",
     "copyright": "Todos los derechos reservados."
+  },
+  "Sidebar": {
+    "general": "General",
+    "socialMedia": "Redes Sociales",
+    "followUs": "Síguenos en nuestras redes sociales para no perderte ninguna novedad."
   }
 }

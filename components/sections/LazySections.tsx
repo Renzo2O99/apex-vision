@@ -1,38 +1,42 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import Loader from "@/app/loader";
+
+// --- Importaciones Dinámicas con Loader ---
+
+const MarqueeSection = dynamic(
+  () => import("@/components/sections/MarqueeSection"),
+  { ssr: false } // Marquee carga rápido, el loader es opcional
+);
 
 const ExperienceSection = dynamic(
   () => import("@/components/sections/ExperienceSection"),
-  { ssr: false }
+  { ssr: false, loading: () => <Loader /> }
 );
 const VideoSection = dynamic(
   () => import("@/components/sections/VideoSection"),
-  { ssr: false }
+  { ssr: false, loading: () => <Loader /> }
 );
 const HeadsetsSection = dynamic(
   () => import("@/components/sections/HeadsetsSection"),
-  { ssr: false }
+  { ssr: false, loading: () => <Loader /> }
 );
 const TestimonialsSection = dynamic(
   () => import("@/components/sections/TestimonialsSection"),
-  { ssr: false }
+  { ssr: false, loading: () => <Loader /> }
 );
 const FooterSection = dynamic(
   () => import("@/components/sections/FooterSection"),
-  { ssr: false }
+  { ssr: false, loading: () => <Loader /> }
 );
 
-// Opcional: Puedes añadir fallbacks aquí si lo necesitas para cada dynamic import.
-// Por ejemplo:
-// const ExperienceSection = dynamic(() => import("@/components/sections/ExperienceSection"), { ssr: false, loading: () => <p>Cargando Experience...</p> });
 
 export default function LazySections() {
-  // ===============================================================
-  // Renderiza los componentes dinámicos AQUÍ, dentro del CLIENT COMPONENT
-  // ===============================================================
   return (
     <>
+      <MarqueeSection />
+
       <ExperienceSection />
 
       <VideoSection />
@@ -40,7 +44,7 @@ export default function LazySections() {
       <HeadsetsSection />
 
       <TestimonialsSection />
-
+      
       <FooterSection />
     </>
   );

@@ -11,7 +11,7 @@ export default function AosInitializer() {
     AOS.init({
       // Puedes pasar tu objeto de configuración aquí,
       // o dejarlo vacío para usar la configuración por defecto de AOS.init()
-      // offset: 120,
+      offset: 50,
       // duration: 400,
       // easing: 'ease',
       // once: false,

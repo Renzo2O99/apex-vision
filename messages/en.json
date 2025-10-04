@@ -103,5 +103,10 @@
     "company": "Apex Vision",
     "about": "Created by Renzo2099",
     "copyright": "All rights reserved."
+  },
+  "Sidebar": {
+    "general": "General",
+    "socialMedia": "Social Media",
+    "followUs": "Follow us on our social networks so you don't miss any news."
   }
 }

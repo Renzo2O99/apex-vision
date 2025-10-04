@@ -14,7 +14,7 @@ export default function LocaleSwitcher() {
         <Button
           size="lg"
           variant="outline"
-          className="flex items-center gap-1 bg-section-900 hover:bg-primary text-blue-100 hover:text-white transition-all ease-in-out duration-300 w-full border-none focus:outline-none focus-visible:ring-0 cursor-none hover:cursor-none"
+          className="flex items-center max-w-2/3 lg:max-w-screen gap-1 bg-section-900 hover:bg-primary text-blue-100 hover:text-white transition-all ease-in-out duration-300 w-full border-none focus:outline-none focus-visible:ring-0 cursor-none hover:cursor-none"
         >
           <GlobeIcon className="h-4 w-4 text-blue-200 group-hover:text-white transition-colors" />
           <span>{t(currentLocale)}</span>

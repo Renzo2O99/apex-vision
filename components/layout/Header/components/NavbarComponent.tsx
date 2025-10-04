@@ -1,5 +1,5 @@
+import HoverLink from "@/components/utils/HoverLink";
 import LocaleSwitcher from "@/components/utils/LocaleSwitcher";
-import NavLink from "@/components/utils/NavLink";
 import { LinkInterface } from "@/interface";
 import { useTranslations } from "next-intl";
 
@@ -10,7 +10,7 @@ interface NavbarComponentProps {
 }
 
 export default function NavbarComponent({ navClass, ulClass, icon }: NavbarComponentProps) {
-  const t = useTranslations("navbar");
+  const t = useTranslations("navbar_section");
 
   const links: LinkInterface[] = [
     { path: "/", textKey: "home" },
@@ -30,9 +30,9 @@ export default function NavbarComponent({ navClass, ulClass, icon }: NavbarCompo
           return isLast ? (
             <li key={index}><LocaleSwitcher /></li>
           ) : (
-            <NavLink key={index} href={link.path}>
+            <HoverLink key={index} href={link.path}>
               {t(link.textKey)}
-            </NavLink>
+            </HoverLink>
           );
         })}
       </ul>

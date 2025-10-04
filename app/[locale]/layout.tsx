@@ -46,6 +46,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html 
       lang={locale}
       suppressHydrationWarning
+      className="dark"
     >
       <body
         className={`${orbitron.variable} ${inter.variable} antialiased`}

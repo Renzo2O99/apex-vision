@@ -1,18 +1,19 @@
 
+import SidebarBits from "@/components/layout/Header/SidebarBits";
 import HeroSection from "@/components/sections/HeroSection";
 import LazySections from "@/components/sections/LazySections";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
-import { Particle } from "@/components/utils/Particle";
 
 export default function Home() {
   return (
-    <>
-      <Particle />
+    <div className="overflow-hidden">
       <SmoothCursor />
+
+      <SidebarBits />
 
       <HeroSection />
 
       <LazySections />
-    </>
+    </div>
   );
 }

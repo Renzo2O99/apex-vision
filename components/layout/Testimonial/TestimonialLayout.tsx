@@ -5,7 +5,7 @@ import { Testimonial } from "@/interface";
 export default function TestimonialLayout() {
   const t = useTranslations("testimonial_section");
 
-  const testimonialIds = [0, 1, 2, 3]; // Only 4 testimonials
+  const testimonialIds = [0, 1, 2, 3];
   
   const testimonialsConfig = {
     title: t("testimonial_title"),
@@ -16,7 +16,7 @@ export default function TestimonialLayout() {
 
       return {
         id: id + 1,
-        rating: testimonial.rating, // Usar el valor numérico directamente
+        rating: testimonial.rating,
         name: testimonial.name,
         role: testimonial.role,
         company: testimonial.company,
@@ -27,8 +27,6 @@ export default function TestimonialLayout() {
     }),
     autoRotateInterval: 6000,
     showVerifiedBadge: true,
-    trustedCompanies: ["Google", "Microsoft", "Airbnb", "Spotify", "Netflix"],
-    trustedCompaniesTitle: t("trusted_companies_title"),
   };
   
   return (
