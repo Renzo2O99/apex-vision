@@ -2,19 +2,16 @@
 
 import { StaggeredMenu } from "@/components/StaggeredMenu";
 import { useTranslations } from "next-intl";
-import { LinkInterface } from "@/interface";
-import { HiHome, HiBuildingOffice2, HiRectangleGroup } from "react-icons/hi2";
-import { MdContacts } from "react-icons/md";
-import { IconType } from "react-icons";
+import { StaggeredMenuItem } from "@/components/StaggeredMenu";
 
 export default function SidebarBits() {
   const t = useTranslations("navbar_section");
 
-  const links: (Omit<LinkInterface, "textKey"> & { textKey: string; icon: IconType })[] = [
-    { path: "/", textKey: "home", icon: HiHome },
-    { path: "/company", textKey: "company", icon: HiBuildingOffice2 },
-    { path: "/contact", textKey: "contact", icon: MdContacts },
-    { path: "/signup", textKey: "signUp", icon: HiRectangleGroup },
+  const links: { path: string; textKey: string }[] = [
+    { path: "/", textKey: "home" },
+    { path: "/company", textKey: "company" },
+    { path: "/contact", textKey: "contact" },
+    { path: "/signup", textKey: "signUp" },
   ];
 
   const menuItems = links.map(link => ({

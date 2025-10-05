@@ -13,19 +13,16 @@ import {
 } from "@/components/ui/sidebar";
 import { useTranslations } from "next-intl";
 import { LinkInterface } from "@/interface";
-import { HiHome, HiBuildingOffice2, HiRectangleGroup } from "react-icons/hi2";
-import { IconType } from "react-icons";
-import { MdContacts } from "react-icons/md";
 
 export function AppSidebar() {
   const isMobile = useIsMobile();
   const t = useTranslations("navbar_section");
 
-  const links: (LinkInterface & { icon: IconType })[] = [
-    { path: "/", textKey: "home", icon: HiHome },
-    { path: "/company", textKey: "company", icon: HiBuildingOffice2 },
-    { path: "/features", textKey: "features", icon: HiRectangleGroup },
-    { path: "/contact", textKey: "contact", icon: MdContacts },
+  const links: LinkInterface[] = [
+    { path: "/", textKey: "home" },
+    { path: "/company", textKey: "company" },
+    { path: "/features", textKey: "features" },
+    { path: "/contact", textKey: "contact" },
   ];
 
   if (!isMobile) {
@@ -38,12 +35,11 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel>General</SidebarGroupLabel>
           <SidebarGroupContent>
-            <SidebarMenu>
-              {links.map(({ path, textKey, icon: Icon }) => (
+            <SidebarMenu className="[&_a]:justify-start">
+              {links.map(({ path, textKey }) => (
                 <SidebarMenuItem key={path}>
-                  <SidebarMenuButton asChild>
-                    <a href={path} className="flex items-center gap-x-2 p-2 text-lg hover:bg-gray-100 rounded-md">
-                      <Icon className="size-5" />
+                  <SidebarMenuButton asChild className="text-lg">
+                    <a href={path}>
                       <span>{t(textKey)}</span>
                     </a>
                   </SidebarMenuButton>

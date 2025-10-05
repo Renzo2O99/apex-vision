@@ -110,6 +110,7 @@ export function SmoothCursor({
   });
 
   useEffect(() => {
+
     const updateVelocity = (currentPos: Position) => {
       const currentTime = Date.now();
       const deltaTime = currentTime - lastUpdateTime.current;

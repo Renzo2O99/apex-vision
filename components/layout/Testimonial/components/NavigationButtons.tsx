@@ -4,7 +4,7 @@ import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from "lucide-react"
 
 export default function NavigationButtons({ handlePrev, handleNext, testimonials, activeIndex, setActiveIndex }: NavigationButtonsProps) {
   return (
-    <div className="flex md:flex-col gap-4 justify-center mt-8 md:mt-0">
+    <div className="relative z-20 flex md:flex-col gap-4 justify-center mt-8 md:mt-0">
       <Button
         variant="outline"
         size="icon"
@@ -12,9 +12,9 @@ export default function NavigationButtons({ handlePrev, handleNext, testimonials
         className="rounded-full h-10 w-10 lg:h-15 lg:w-15 bg-gray-900 border-gray-700 hover:bg-gray-500 transition-all ease-in-out duration-300 cursor-none"
         aria-label="Previous testimonial"
       >
-        <ChevronUp className="h-4 w-4 hidden lg:block" />
+        <ChevronUp className="h-4 w-4 hidden md:block" />
 
-        <ChevronLeft className="h-4 w-4 lg:hidden" />
+        <ChevronLeft className="h-4 w-4 md:hidden" />
       </Button>
 
       <div className="flex md:flex-col gap-2 items-center justify-center">
@@ -42,9 +42,9 @@ export default function NavigationButtons({ handlePrev, handleNext, testimonials
         className="rounded-full h-10 w-10 lg:h-15 lg:w-15 bg-gray-900 border-gray-700 hover:bg-gray-500 transition-all ease-in-out duration-300 cursor-none"
         aria-label="Next testimonial"
       >
-        <ChevronDown className="h-4 w-4 hidden lg:block" />
+        <ChevronDown className="h-4 w-4 hidden md:block" />
 
-        <ChevronRight className="h-4 w-4 lg:hidden" />
+        <ChevronRight className="h-4 w-4 md:hidden" />
       </Button>
     </div>
   );
