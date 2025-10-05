@@ -303,7 +303,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={`sm-scope z-[9999] transition-opacity duration-200 ${isInitialized ? 'opacity-100' : 'opacity-0'} ${isFixed ? `fixed top-0 left-0 ${open ? 'w-screen h-screen' : 'w-full h-auto'}` : 'w-full h-full'}`}
+  className={`sm-scope z-[9999] transition-opacity duration-200 ${isInitialized ? 'opacity-100' : 'opacity-0'} ${isFixed ? `fixed top-0 left-0 w-screen h-screen ${!open ? 'pointer-events-none' : ''}` : 'w-full h-full'}`}
     >
       <div
         className={(className ? className + ' ' : '') + 'staggered-menu-wrapper relative w-full h-full z-40'}
