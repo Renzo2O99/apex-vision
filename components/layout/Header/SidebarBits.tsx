@@ -2,7 +2,6 @@
 
 import { StaggeredMenu } from "@/components/StaggeredMenu";
 import { useTranslations } from "next-intl";
-import { StaggeredMenuItem } from "@/components/StaggeredMenu";
 
 export default function SidebarBits() {
   const t = useTranslations("navbar_section");
